@@ -34,7 +34,7 @@ const SignUp = () => {
   const checkEmailFormat = (value) => {
     const emailRegex = /^[0-9a-zA-Z]{12}@kletech\.ac\.in$/;
     if (!emailRegex.test(value)) {
-      setEmailError(" Use your Strathmore email!");
+      setEmailError(" Use your KLE Tech email!");
     } else {
       setEmailError("");
     }
