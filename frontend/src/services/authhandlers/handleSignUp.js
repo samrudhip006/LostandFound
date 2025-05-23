@@ -21,7 +21,7 @@ const handleSignUp = async (
   const trimmedPhone = phone_number.trim();
 
   if (!emailRegex.test(email)) {
-    setEmailError("Use your Strathmore email!");
+    setEmailError("Use your KLE Tech email!");
     setIsLoading(false);
     return;
   }
