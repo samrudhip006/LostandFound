@@ -1,0 +1,43 @@
+name: Deploy to EC2 via SSH
+
+on:
+  push:
+    branches: [ main ]  # You can change to another branch if needed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Decode SSH key and prepare for SSH
+      run: |
+        echo "${{ secrets.EC2_KEY_BASE64 }}" | base64 --decode > key.pem
+        chmod 400 key.pem
+
+    - name: SSH and deploy to EC2
+      env:
+        EC2_HOST: ${{ secrets.EC2_HOST }}  # Ex: ubuntu@yourname.duckdns.org
+      run: |
+        ssh -o StrictHostKeyChecking=no -i key.pem $EC2_HOST << 'EOF'
+          set -e  # Fail fast on errors
+
+          # Clone or update repo
+          if [ ! -d "LostandFound" ]; then
+            git clone https://github.com/samrudhip006/LostandFound.git
+          fi
+
+          cd LostandFound
+
+          # Pull latest code
+          git pull origin main
+
+          # Rebuild and restart containers
+          docker-compose down
+          docker-compose up --build -d
+
+          # OPTIONAL: Init DB (skip if already initialized)
+          docker-compose exec backend python backend/init_db.py || true
+        EOF
