@@ -1,18 +1,23 @@
-#syntax=docker/dockerfile:1
-
+# Use official Node.js image
 FROM node:18.17.1
 
+# Set working directory
 WORKDIR /strathlostandfound/frontend
 
-COPY . /strathlostandfound/frontend/
+# Copy only package.json and package-lock.json first (for caching)
+COPY package*.json ./
 
 # Install dependencies
 RUN npm install --force
 
+# Copy rest of the frontend files
+COPY . .
 
+# Make vite executable
+RUN chmod +x node_modules/.bin/vite
 
-
+# Expose port used by vite dev server
 EXPOSE 5173
 
-CMD ["npm","run", "start:frontend", "--", "--host", "0.0.0.0"]
-
+# Start frontend dev server accessible externally
+CMD ["npm", "run", "start:frontend", "--", "--host", "0.0.0.0"]
