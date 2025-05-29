@@ -19,7 +19,7 @@ import { CgSpinner } from "react-icons/cg";
   
     
     try{
-      const response=await fetch("http://localhost:5000/forgot",{
+      const response=await fetch("http://52.9.35.104:5000/forgot",{
         method:"POST",
         headers:{
           "Content-Type":"Application/json"

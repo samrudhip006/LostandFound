@@ -27,7 +27,7 @@ export default function ResetPassword() {
     console.log("User ID:", id);
     console.log("Token:", queryParams);
     try {
-      const response = await fetch(`http://localhost:5000/reset/${id}`, {
+      const response = await fetch(`http://52.9.35.104:5000/reset/${id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

@@ -9,7 +9,7 @@ function handleAdminClaim(data,item,items,claims,setItems,setClaims,toast) {
     const patchData={
         Status:"Inactive"
     }
-    fetch(`http://localhost:5000/lost_items/${data.item_id}`,{
+    fetch(`http://52.9.35.104:5000/lost_items/${data.item_id}`,{
         method:"PATCH",
         headers:{
             "Content-Type":"Application/json"
@@ -27,7 +27,7 @@ function handleAdminClaim(data,item,items,claims,setItems,setClaims,toast) {
      const claimPatchData={
        Status:"Active"
      }
-    fetch(`http://localhost:5000/claims/${data.id}`,{
+    fetch(`http://52.9.35.104:5000/claims/${data.id}`,{
             method:"PATCH",
             headers:{
                 "Content-Type":"Application/json"

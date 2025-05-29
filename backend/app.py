@@ -216,7 +216,7 @@ class Forgot(Resource):
             return make_response(jsonify({"error": "Account Doesn't Exist!"}), 402)
         
         token=create_access_token(identity=email)
-        url=f"http://localhost:5173/reset/{user.id}?{token}"
+        url=f"http://52.9.35.104:5173/reset/{user.id}?{token}"
         msg=Message("Password Reset", sender='no-reply@example.com', recipients=[email])
         msg.body=f"Click the following link to reset your password: {url}"
         try:

@@ -7,7 +7,7 @@ export const handleSignIn = async (email, password, setLoading, setemailError, s
     
     // Attempts to fetch data from the login endpoint with the provided email and password
     try {
-      const response = await fetch("http://localhost:5000/login", {
+      const response = await fetch("http://52.9.35.104:5000/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

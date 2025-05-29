@@ -5,7 +5,7 @@ function handleRejectClaim(data,claims,setClaims,toast) {
       Status: "Inactive"
     };
   
-    fetch(`http://localhost:5000/claims/${data.id}`, {
+    fetch(`http://52.9.35.104:5000/claims/${data.id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',

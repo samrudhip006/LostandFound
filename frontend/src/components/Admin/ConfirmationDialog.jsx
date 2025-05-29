@@ -11,7 +11,7 @@ const ConfirmationDialog = ({ isOpen, onClose ,association}) => {
     onClose();
     const intInput=parseInt(inputValue)
     
-    fetch(`http://localhost:5000/claims/${association}`,{
+    fetch(`http://52.9.35.104:5000/claims/${association}`,{
         method:"PATCH",
         headers:{
             "Content-Type":"Application/json"

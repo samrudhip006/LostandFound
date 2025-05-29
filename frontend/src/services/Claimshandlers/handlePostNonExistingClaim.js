@@ -10,7 +10,7 @@ const handlePostNonExistingClaim = async (categoryInt,userInt,image_proof,locati
     
     console.log(formData);
     try{
-        const response=await fetch("http://localhost:5000/claims",{
+        const response=await fetch("http://52.9.35.104:5000/claims",{
         method:"POST",
         headers:{
             "Authorization": `Bearer ${token}`

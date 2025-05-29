@@ -39,7 +39,7 @@ export default function MyClaimcard() {
     formData.append("category_id",category_id)
     formData.append("location",location)
     try{
-        const response=await fetch("http://localhost:5000/claims",{
+        const response=await fetch("http://52.9.35.104:5000/claims",{
         method:"POST",
         body:formData
     })
