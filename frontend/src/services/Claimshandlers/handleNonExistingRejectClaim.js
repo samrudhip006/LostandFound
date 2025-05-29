@@ -6,7 +6,7 @@ function handleNonExistingRejectClaim(data,claims,setClaims,toast) {
       toast.error("Claim already rejected");
       return 0;
     }
-    fetch(`http://localhost:5000/claims/${data.id}`, {
+    fetch(`http://52.9.35.104:5000/claims/${data.id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',

@@ -33,7 +33,7 @@ const handleSignUp = async (
   }
 
   try {
-    const response = await fetch("http://localhost:5000/users", {
+    const response = await fetch("http://52.9.35.104:5000/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

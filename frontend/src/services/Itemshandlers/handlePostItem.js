@@ -16,7 +16,7 @@ const handlePostItem =async (name,location,date,user_id,image,description,catego
     
     
     try {
-      const response = await fetch("http://localhost:5000/lost_items", {
+      const response = await fetch("http://52.9.35.104:5000/lost_items", {
         method: "POST",
         headers: {
           "Authorization": `Bearer ${token}`

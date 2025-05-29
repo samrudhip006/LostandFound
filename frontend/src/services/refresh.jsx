@@ -6,7 +6,7 @@ export const refreshToken = async () => {
   
     if (refreshTokenVar) {
       try {
-        const response = await fetch("http://localhost:5000/refresh", {
+        const response = await fetch("http://52.9.35.104:5000/refresh", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

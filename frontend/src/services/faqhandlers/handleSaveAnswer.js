@@ -5,7 +5,7 @@ const handleSaveAnswer = (index, newAnswer, item_id,questions,setQuestions,toast
     updatedQuestions[index] = updatedItem; 
     setQuestions(updatedQuestions);
   
-    fetch(`http://localhost:5000/reviews/${item_id}`, {
+    fetch(`http://52.9.35.104:5000/reviews/${item_id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "Application/json"

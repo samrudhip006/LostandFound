@@ -6,7 +6,7 @@ export default function handlePostFaq(question,toast,setNewQuestion) {
       return;
     }
 
-    fetch('http://localhost:5000/reviews', {
+    fetch('http://52.9.35.104:5000/reviews', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
