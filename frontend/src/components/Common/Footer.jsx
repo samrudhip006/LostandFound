@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="bg-blue-800 text-white py-4">
       <div className="container mx-auto flex flex-wrap items-center justify-between">
         <div className="text-center md:text-left">
-          <p>&copy; {new Date().getFullYear()} KLETECH Lost & Found</p>
+          <p>&copy; {new Date().getFullYear()} KLETECH University Lost & Found</p>
         </div>
         <div className="text-center md:text-right mt-2 md:mt-0">
           <Link to="/home" className="text-sm mr-4 hover:underline">
