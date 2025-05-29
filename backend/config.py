@@ -12,7 +12,7 @@ class ApplicationConfig:
     MAIL_PORT=465
     MAIL_USE_TLS=False
     MAIL_USE_SSL=True
-    MAIL_USERNAME="rohitrathod15032004@gmail.com"
+    MAIL_USERNAME="samrudhi@gmail.com"
     MAIL_PASSWORD="wyic vqbr iirq wdmu"
     MAIL_DEFAULT_SENDER='no-reply@example.com'
     JWT_SECRET_KEY='assefejfrbngjtnginfongjngonr1oij94hrn94ut598yhginen'
